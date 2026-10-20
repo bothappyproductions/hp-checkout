@@ -8,7 +8,7 @@
  */
 (function () {
   var CFG = Object.assign({
-    apiBase: 'https://hp-checkout.REPLACE-ME.workers.dev',
+    apiBase: 'https://hp-checkout.happyproductions-hooks.workers.dev',
     publishableKey: 'pk_live_REPLACE_ME',
     stripeJs: 'https://js.stripe.com/dahlia/stripe.js',
     fallbackUrl: 'https://buy.stripe.com/fZuaEX6Qyamp1k1eJq8AE26',
