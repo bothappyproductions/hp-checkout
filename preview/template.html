@@ -1,0 +1,71 @@
+<title>Happy Checkout Preview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+<style>
+/* Layout: the live home page pricing section, copied 1:1 from the Webflow styles, on the site's white band. */
+:root{
+  --ink:#1f1f1f; --ink-2:#2a2a2a; --line:#3a3a3a; --paper:#ffffff; --sun:#ffe757; --lilac:#cbc4fe; --pink:#fdd0f7; --mute:#bdbdbd;
+  --display:Cabinetgrotesk,"Bricolage Grotesque",Poppins,sans-serif; --body:Poppins,system-ui,sans-serif;
+  color-scheme:light;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--body)}
+@font-face{font-family:Cabinetgrotesk;src:local("Cabinet Grotesk"),local("CabinetGrotesk-Extrabold");font-weight:800}
+.note{background:var(--lilac);border-bottom:2px solid var(--ink);padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));font:500 14px/1.5 var(--body)}
+.note b{font-weight:700}
+.wrap{padding-block:56px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{text-align:center;font:600 13px/18px var(--body);letter-spacing:1px;text-transform:uppercase;color:#7e66e0}
+h2{text-align:center;margin:10px auto 0;max-width:720px;font:800 clamp(32px,6vw,52px)/1.05 var(--display);text-wrap:balance}
+.ps-block{max-width:1000px;margin:40px auto 0}
+.ps-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border:2px solid var(--ink);border-radius:28px;background:var(--ink);box-shadow:10px 10px 0 var(--sun);overflow:hidden}
+.ps-left{display:flex;flex-direction:column;justify-content:center;padding:48px 40px 44px 48px}
+.ps-right{display:flex;flex-direction:column;justify-content:center;padding:48px 48px 44px 44px;border-left:1px solid var(--line);background:var(--ink-2)}
+.ps-badge{align-self:flex-start;padding:6px 14px;border-radius:50px;background:var(--lilac);color:var(--ink);font:600 13px/16px var(--body)}
+.ps-name{margin-top:22px;color:#fff;font:800 28px/32px var(--display)}
+.ps-price-row{display:flex;margin-top:12px;align-items:flex-end;gap:8px}
+.ps-price{color:var(--sun);font:800 96px/88px var(--display)}
+.ps-per{padding-bottom:10px;color:#fff;font:500 20px/24px var(--body)}
+.ps-note{margin-top:12px;color:var(--lilac);font:15px/22px var(--body)}
+.ps-btn{display:block;margin-top:32px;padding:20px 24px;border-radius:50px;background:var(--sun);color:var(--ink);font:800 20px/24px var(--display);text-align:center;text-decoration:none}
+.ps-btn:focus-visible,.hpco-btn:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+.ps-micro{margin-top:12px;color:var(--mute);font:13px/18px var(--body);text-align:center}
+.ps-label{color:var(--lilac);font:600 13px/18px var(--body);letter-spacing:1px;text-transform:uppercase}
+.ps-list{display:flex;margin-top:22px;flex-direction:column;gap:18px}
+.ps-item{display:flex;align-items:flex-start;gap:14px}
+.ps-tick{display:flex;width:26px;height:26px;flex:none;justify-content:center;align-items:center;border-radius:50px;background:var(--sun);color:var(--ink);font:700 14px/14px var(--body)}
+.ps-item-t{color:#fff;font:500 17px/26px var(--body)}
+@media (max-width:767px){.ps-card{grid-template-columns:1fr}.ps-right{border-left:0;border-top:1px solid var(--line)}.ps-left,.ps-right{padding:32px 24px}.ps-price{font-size:72px;line-height:68px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="note"><b>Preview.</b> This is the home page pricing card as it is live today. Click <b>Start for $995/month</b> to see it turn into the checkout. The payment fields here are stand-ins; on the site they are Stripe's secure fields with Link, Apple Pay and Google Pay.</div>
+
+<div class="wrap">
+  <div class="eyebrow">Pricing</div>
+  <h2>One plan. Everything your nonprofit needs on video.</h2>
+  <div class="ps-block">
+    <div class="ps-card">
+      <div class="ps-left">
+        <div class="ps-badge">One plan. Everything included.</div>
+        <div class="ps-name">Monthly Partnership</div>
+        <div class="ps-price-row"><div class="ps-price">$995</div><div class="ps-per">/month</div></div>
+        <div class="ps-note">Billed monthly. Cancel anytime.</div>
+        <a class="ps-btn" href="https://buy.stripe.com/fZuaEX6Qyamp1k1eJq8AE26">Start for $995/month →</a>
+        <div class="ps-micro">Secure checkout with Stripe · No contract</div>
+      </div>
+      <div class="ps-right">
+        <div class="ps-label">Every month you get</div>
+        <div class="ps-list">
+          <div class="ps-item"><div class="ps-tick">✓</div><div class="ps-item-t">One video session, directed live by our producer</div></div>
+          <div class="ps-item"><div class="ps-tick">✓</div><div class="ps-item-t">Unlimited edit requests on everything we film</div></div>
+          <div class="ps-item"><div class="ps-tick">✓</div><div class="ps-item-t">Social clips, donor appeals and impact stories</div></div>
+          <div class="ps-item"><div class="ps-tick">✓</div><div class="ps-item-t">Captions and sizes for every platform</div></div>
+          <div class="ps-item"><div class="ps-tick">✓</div><div class="ps-item-t">Every file is yours to keep</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/*__SCRIPT__*/
+</script>

@@ -1,0 +1,15 @@
+name = "hp-checkout"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Monthly Partnership, $995/month (live price on the Happy Productions LLC account)
+PRICE_ID = "price_1ULoUTFpcExHS5eF92eI81Pu"
+RETURN_URL = "https://onboarding.happyproductions.video/?session_id={CHECKOUT_SESSION_ID}"
+TERMS_VERSION = "monthly-2026-10-20"
+TERMS_URL = "https://www.happyproductions.me/monthly-terms"
+STRIPE_API_VERSION = "2026-03-25.dahlia"
+ALLOWED_ORIGINS = "https://www.happyproductions.me,https://happyproductions.me,https://happy-productions.webflow.io"
+
+# Secret, set with: npx wrangler secret put STRIPE_SECRET_KEY
+# For a test run, put a sk_test_ key here and swap PRICE_ID for a test-mode price.
